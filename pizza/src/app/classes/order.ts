@@ -1,11 +1,9 @@
 import {Client} from "./client";
-import {PizzaOrder} from "./pizza-order";
-import {IngredientOrder} from "./ingredient-order";
+import {Request} from "./request";
 
 export class Order {
   constructor(public id?: number,
               public price?: number,
-              public pizzas?: PizzaOrder[],
-              public ingredients?: IngredientOrder[],
+              public pizzas?: Request[],
               public clientId?: number | Client) { }
 }

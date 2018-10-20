@@ -1,8 +1,8 @@
-import {PizzaOrder} from "./pizza-order";
+import {Request} from "./request";
 
 export class Pizza {
   constructor(public id?: number,
               public size?: string,
               public price?: number,
-              public orders?: PizzaOrder[]) { }
+              public requests?: Request[]) { }
 }

@@ -1,8 +1,8 @@
-import {Order} from "./order";
 import {Ingredient} from "./ingredient";
+import {Request} from "./request";
 
-export class IngredientOrder {
+export class IngredientRequest {
   constructor(public id?: number,
               public ingredientId?: number | Ingredient,
-              public orderId?: number | Order) { }
+              public requestId?: number | Request) { }
 }

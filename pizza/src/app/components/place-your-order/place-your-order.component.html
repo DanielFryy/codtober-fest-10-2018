@@ -1,3 +1,91 @@
-<p>
-  place-your-order works!
-</p>
+<!-- FORM PART -->
+
+<div class="container">
+
+  <!-- Notification Area -->
+
+  <div id="order-alert" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Great!</h4>
+    <p>Your order was accepted successfully</p>
+  </div>
+
+  <div class="jumbotron">
+    <h2 class="text-center">Build your own pizza!</h2>
+
+    <form id="order-form" (ngSubmit)="order()" #orderForm="ngForm">
+
+      <!-- CLIENT DATA -->
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Name: </label>
+        <div class="col-sm-10">
+          <input required name="name" type="text"
+                 [(ngModel)]="clientName"
+                 class="form-control" placeholder="Name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Address: </label>
+        <div class="col-sm-10">
+          <input required name="address" type="text"
+                 [(ngModel)]="clientAddress"
+                 class="form-control" placeholder="Address">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Phone #: </label>
+        <div class="col-sm-10">
+          <input required name="phone" type="text"
+                 [(ngModel)]="clientPhone"
+                 class="form-control" placeholder="Phone">
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- SIZE AND INGREDIENTS -->
+
+      <table class="table bg-white table-bordered" *ngIf="pizzas && ingredients">
+        <thead class="thead-dark">
+        <tr>
+          <th class="w-50">Choose a size</th>
+          <th class="w-50">Choose your ingredients</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <div class="form-check" *ngFor="let pizza of pizzas">
+              <input id="pizza" [value]=pizza.id required name="size"
+                     [(ngModel)]="pizzaId"
+                     class="form-check-input" type="radio">
+              <label class="form-check-label" for="pizza">
+                {{ pizza.size }} - {{ pizza.price | currency }}
+              </label>
+            </div>
+          </td>
+          <td>
+            <div class="form-check" *ngFor="let ingredient of ingredients">
+              <input id="ingredient" name="ingredients" [value]=ingredient.id
+                     [(ngModel)]="selectedIngredients"
+                     class="form-check-input" type="checkbox">
+              <label class="form-check-label" for="ingredient">
+                {{ ingredient.name }} - {{ ingredient.price | currency }}
+              </label>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <!-- ORDER BUTTON -->
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning btn-lg">Order</button>
+      </div>
+
+    </form>
+  </div>
+</div>

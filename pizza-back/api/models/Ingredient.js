@@ -29,8 +29,8 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    orders: {
-      collection: 'IngredientOrder',
+    requests: {
+      collection: 'IngredientRequest',
       via: 'ingredientId'
     }
 

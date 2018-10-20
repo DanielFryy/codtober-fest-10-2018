@@ -28,8 +28,8 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    orders: {
-      collection: 'PizzaOrder',
+    requests: {
+      collection: 'Request',
       via: 'pizzaId'
     }
 

@@ -26,12 +26,8 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    ingredients: {
-      collection: 'IngredientOrder',
-      via: 'orderId'
-    },
     pizzas: {
-      collection: 'PizzaOrder',
+      collection: 'Request',
       via: 'orderId'
     },
     clientId: {

@@ -16,6 +16,12 @@ module.exports = {
     name: {
       type: 'string'
     },
+    address: {
+      type: 'string'
+    },
+    phone: {
+      type: 'string'
+    },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
